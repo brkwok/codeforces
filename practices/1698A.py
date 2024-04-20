@@ -4,9 +4,9 @@ for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
 
-    res= 0
+    xor = 0
 
-    for i in range(n - 1):
-        res = max(res, a[i] * a[i + 1])
+    for num in a:
+        xor ^= num
 
-    print(res)
+    print(xor ^ a[0])
